@@ -128,6 +128,11 @@ class BucketListViewController: UITableViewController, AddItemTableViewControlle
         }
     }
     
+    @IBAction func refresh(_ sender: UIBarButtonItem) {
+        getTasks()
+    }
+    
+    
     func getTasks(){
         TaskModel.getAllTasks() {
             data, response, error in
